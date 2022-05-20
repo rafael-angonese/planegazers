@@ -6,15 +6,15 @@ import styled from "styled-components";
 const Title = styled.h1`
   background: linear-gradient(
     135deg,
-    ${(props) => props.theme.purple[500]},
-    ${(props) => props.theme.pink[500]}
+    ${(props) => props.theme.palette.purple[500]},
+    ${(props) => props.theme.palette.pink[500]}
   );
   background-size: 100;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  font-size: 6rem;
+  font-size: ${({ theme }) => theme.fontSizes["8xl"]};
 `;
 
 const Center = styled.div`
