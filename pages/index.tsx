@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col min-h-screen justify-center bg-black">
+      <div className="flex flex-col h-full justify-center">
         <div className="mx-auto container max-w-6xl">
           <div className="max-w-fit">
             <h1 className="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">

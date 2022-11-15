@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+
+html {
+  @apply h-full;
+}
+body {
+  @apply h-full;
+}
+div#__next {
+  @apply h-full;
+}
+main {
+  @apply h-full;
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -28,3 +42,4 @@ a {
     background: black;
   }
 }
+ */
