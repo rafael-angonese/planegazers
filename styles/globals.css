@@ -15,6 +15,35 @@ main {
   @apply h-full;
 }
 
+
+/* html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+} */
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ff80bf #151417;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #151417;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff80bf;
+  border-radius: 10px;
+  border: 10px solid #ff80bf;
+}
+
+
 /* html,
 body {
   padding: 0;
