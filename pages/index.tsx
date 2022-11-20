@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col h-full justify-center">
+      <div className="flex flex-col justify-center h-full">
         <div className="mx-auto container max-w-6xl">
           <div className="max-w-fit">
             <h1 className="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -25,21 +25,6 @@ export default function Home() {
           <p className="text-gray-200 font-bold mt-8 text-xl">
             Pressione ctrl K para iniciar →
           </p>
-
-          {/* <p className="text-gray-400 mt-4 text-xl">
-            Precisando de um desenvolvedor? Vamos trabalhar juntos!
-          </p> */}
-          {/* <p className="text-gray-400 mt-4 text-xl">
-            Eu me especializei na criação de software para clientes que vão
-            desde indivíduos e pequenas empresas até grandes corporações. O que
-            você faria se tivesse um especialista em software disponível ao seu
-            alcance?
-          </p> */}
-
-          {/* <p>Pixel-Perfect Code</p>
-          <p>Built With Love</p>
-
-          <p>NEED A DESIGNER? Let’s work together</p> */}
         </div>
       </div>
     </>

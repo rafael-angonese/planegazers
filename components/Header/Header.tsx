@@ -4,7 +4,7 @@ import React from "react";
 const Header: React.FC = () => {
   return (
     <>
-      <header className="flex items-center justify-between mt-3 mx-5">
+      <header className="flex items-center justify-between pt-3 px-5">
         <div className="text-white">
           <Link href="/">Logo</Link>
         </div>
