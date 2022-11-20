@@ -1,7 +1,12 @@
+import { useKBar } from "kbar";
 import Link from "next/link";
 import React from "react";
 
+import { Command } from "phosphor-react";
+
 const Header: React.FC = () => {
+  const { query } = useKBar();
+
   return (
     <>
       <header className="flex items-center justify-between pt-3 px-5">
@@ -23,7 +28,9 @@ const Header: React.FC = () => {
             Projetos
           </Link>
         </div>
-        <div className="text-white">Btn</div>
+        <button onClick={query.toggle} className="text-white p-2 rounded hover:bg-zinc-800">
+          <Command size={22} />
+        </button>
       </header>
     </>
   );

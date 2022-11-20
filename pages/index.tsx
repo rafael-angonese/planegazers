@@ -1,3 +1,5 @@
+import ShortcutHome from "components/screens/Home/Shortcut";
+
 export default function Home() {
   return (
     <>
@@ -22,9 +24,7 @@ export default function Home() {
             de tecnologia.
           </p>
 
-          <p className="text-gray-200 font-bold mt-8 text-xl">
-            Pressione ctrl K para iniciar →
-          </p>
+          <ShortcutHome />
         </div>
       </div>
     </>

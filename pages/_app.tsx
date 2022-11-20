@@ -1,16 +1,19 @@
-import "styles/globals.css";
-import type { AppProps } from "next/app";
+import CommandBar from "components/CommandBar/CommbandBar";
 import Header from "components/Header/Header";
+import type { AppProps } from "next/app";
+import "styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className="flex flex-col space-between h-full">
-        <Header />
-        <div className="mx-6 h-full">
-          <Component {...pageProps} />
+      <CommandBar>
+        <div className="flex flex-col space-between h-full">
+          <Header />
+          <div className="mx-6 h-full">
+            <Component {...pageProps} />
+          </div>
         </div>
-      </div>
+      </CommandBar>
     </>
   );
 }
