@@ -27,7 +27,7 @@ const AboutPage: NextPage = () => {
 
             <div className="mt-8 md:mt-0 w-full md:w-[70%]">
               <p className="text-gray-200 text-lg">
-                Meu nome é Rafael.
+                Olá, Meu nome é Rafael.
                 <br />
                 Sou desenvolvedor full-stack com foco em front-end.
                 <br />
