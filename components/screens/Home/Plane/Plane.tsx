@@ -13,31 +13,37 @@ const PlaneScene: React.FC = () => {
 
   // useFrame((state, delta) => (ref.current.rotation.x += 0.01));
 
-  useFrame(({ camera }) => {
-    // Move mesh to be flush with camera
-    // console.log("mudou algo aqui");
-    //  console.log(ref)
-    //  ref.current.rotation.y += 0.05;
-    //    ref.current.position.x =+ 10;
-    //  ref.current.rotation.x += 0.01
-    // Apply offset
-    //   ref.current.translateZ(+0.05);
-    // ref.current.translateY(+0.01);
-    // if (ref.current.position.z >= 10) {
-    //   ref.current.translateZ(-20);
-    // ref.current.translateY(-20);
-    // }
-    // console.log(ref.current.position)
-    console.log("------------------------");
-    console.log(camera.position);
+  // useFrame((state) => {
+  //   // Move mesh to be flush with camera
+  //   // console.log("mudou algo aqui");
+  //   //  console.log(ref)
+  //   //  ref.current.rotation.y += 0.05;
+  //   //    ref.current.position.x =+ 10;
+  //   //  ref.current.rotation.x += 0.01
+  //   // Apply offset
+  //   //   ref.current.translateZ(+0.05);
+  //   // ref.current.translateY(+0.01);
+  //   // if (ref.current.position.z >= 10) {
+  //   //   ref.current.translateZ(-20);
+  //   // ref.current.translateY(-20);
+  //   // }
+  //   // console.log(ref.current.position)
+  //   console.log("------------------------");
+  //   // console.log(state.size);
+  //   // console.log(state.viewport);
     
-    console.log("------------------------");
-  });
+  //   console.log("------------------------");
+  // });
 
   useEffect(() => {
     // ref.current.translateZ(0.1);
-    console.log(ref.current);
-    ref.current.position.z = -20;
+    console.log("scrollY:", scrollY)
+    console.log("scrollY:", scrollY)
+
+    console.log((scrollY/100)*8);
+
+
+    ref.current.position.z = ((scrollY/100)*30) - 60;
   }, [scrollY]);
 
   return (
@@ -47,7 +53,7 @@ const PlaneScene: React.FC = () => {
       <pointLight position={[-3, -3, 2]} />
       {/* <CameraController /> */}
 
-      <Plane ref={ref} scale={4} position={[0, 2, -20]} />
+      <Plane ref={ref} scale={4} position={[-10, 10, -60]} />
 
       {/* <Float
                 speed={6}

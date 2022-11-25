@@ -55,12 +55,12 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="text-gray-200 mt-8 text-xl">
+          {/* <div className="text-gray-200 mt-8 text-xl">
             Scroll position is ({scrollX}, {scrollY})
           </div>
           <div className="text-gray-200 mt-8 text-xl">
             Window (height: {height}, width: {width})
-          </div>
+          </div> */}
 
           <p className="text-gray-200 mt-8 text-xl">
             Sou um desenvolvedor web full-stack focado em frontend.
