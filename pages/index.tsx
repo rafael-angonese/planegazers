@@ -7,6 +7,7 @@ import { Suspense, useRef } from "react";
 import useWindowScrollPositions from "hooks/useWindowScrollPositions";
 import useWindowSize from "hooks/useWindowSize";
 import PlaneScene from "components/screens/Home/Plane/Plane";
+import { Scene } from "components/screens/Home/Scene";
 
 const MyPlane = () => {
   // const {
@@ -44,7 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative flex flex-col justify-center h-full">
+      {/* <div className="relative flex flex-col justify-center h-full">
         <div className="mx-auto container max-w-6xl">
           <div className="max-w-fit">
             <h1 className="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -54,13 +55,6 @@ export default function Home() {
               Criando mundos com letras e números.
             </span>
           </div>
-
-          {/* <div className="text-gray-200 mt-8 text-xl">
-            Scroll position is ({scrollX}, {scrollY})
-          </div>
-          <div className="text-gray-200 mt-8 text-xl">
-            Window (height: {height}, width: {width})
-          </div> */}
 
           <p className="text-gray-200 mt-8 text-xl">
             Sou um desenvolvedor web full-stack focado em frontend.
@@ -82,7 +76,7 @@ export default function Home() {
             </Suspense>
           </Canvas>
         </div>
-      </div>
+      </div> */}
       {/* <div className="relative border-red-100 border w-full">
         <div className="absolute z-30 top-0 right-0 ">
           <Canvas>
@@ -96,17 +90,14 @@ export default function Home() {
           </Canvas>
         </div>
       </div> */}
-
-      <div className="relative flex flex-col justify-center h-full">
-        <div className="text-gray-200 mt-8 text-xl">
-          Scroll position is ({scrollX}, {scrollY}){height}
-          {/* {window.screenY}
-          <br />
-          {window.screen.height}
-          <br />
-          {window.innerHeight} */}
-        </div>
-      </div>
+      {/* <ShortcutHome /> */}
+      <Canvas>
+        <ambientLight />
+        <directionalLight color="red" intensity={10} />
+        <Suspense fallback={null}>
+          <Scene />
+        </Suspense>
+      </Canvas>
     </>
   );
 }

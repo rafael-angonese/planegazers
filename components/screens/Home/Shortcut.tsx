@@ -23,7 +23,7 @@ const ShortcutHome = () => {
       {isMobile && (
         <button
           className="text-gray-200 font-semibold mt-8 text-lg p-2 rounded-xl hover:bg-zinc-800"
-          onClick={query.toggle}
+          onClick={query?.toggle}
         >
           Clique para iniciar →
         </button>
@@ -32,7 +32,7 @@ const ShortcutHome = () => {
       {!isMobile && isMac && (
         <button
           className="text-gray-200 font-semibold mt-8 text-lg p-2 rounded-xl hover:bg-zinc-800"
-          onClick={query.toggle}
+          onClick={query?.toggle}
         >
           Pressione <Kbd>⌘</Kbd> <Kbd>K</Kbd> para iniciar →
         </button>
@@ -41,7 +41,7 @@ const ShortcutHome = () => {
       {!isMobile && !isMac && (
         <button
           className="text-gray-200 font-semibold mt-8 text-lg p-2 rounded-xl hover:bg-zinc-800"
-          onClick={query.toggle}
+          onClick={query?.toggle}
         >
           Pressione <Kbd>ctrl</Kbd> <Kbd>K</Kbd> para iniciar →
         </button>

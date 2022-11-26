@@ -179,12 +179,15 @@ type GLTFActions = Record<ActionName, THREE.AnimationAction>;
 
 const Plane = React.forwardRef(
   (props: JSX.IntrinsicElements["group"], ref: React.Ref<THREE.Group>) => {
+    // @ts-ignore
     const { nodes, materials, animations } = useGLTF(
       "/plane/scene.gltf"
     ) as GLTFResult;
+    // @ts-ignore
     const { actions } = useAnimations<GLTFActions>(animations, ref);
 
     useEffect(() => {
+      // @ts-ignore
       actions["Take 001"].play();
     }, [actions]);
 
