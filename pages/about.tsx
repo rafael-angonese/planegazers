@@ -115,7 +115,7 @@ const AboutPage: NextPage = () => {
               Atuar como desenvolvedor front-end, atuando em diversos projetos
               tanto para empresas de pequeno porte quanto para grandes empresas.
               <br />
-              Tecnologias em destaque: Typescript, React, Next, Vue, Nuxt
+              Tecnologias em destaque: Typescript, React, Next, Vue, Nuxt.
             </p>
           </div>
 

@@ -8,6 +8,7 @@ import useWindowScrollPositions from "hooks/useWindowScrollPositions";
 import useWindowSize from "hooks/useWindowSize";
 import PlaneScene from "components/screens/Home/Plane/Plane";
 import { Scene } from "components/screens/Home/Scene";
+import { useKBar } from "kbar";
 
 const MyPlane = () => {
   // const {
@@ -42,6 +43,9 @@ const MyPlane = () => {
 export default function Home() {
   const { scrollX, scrollY } = useWindowScrollPositions();
   const { height, width } = useWindowSize();
+
+  const { query } = useKBar();
+
 
   return (
     <>
@@ -95,7 +99,7 @@ export default function Home() {
         <ambientLight />
         <directionalLight color="red" intensity={10} />
         <Suspense fallback={null}>
-          <Scene />
+          <Scene query={query} />
         </Suspense>
       </Canvas>
     </>
