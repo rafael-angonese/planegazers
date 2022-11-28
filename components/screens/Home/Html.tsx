@@ -7,7 +7,7 @@ interface HtmlProps {
 
 const Html: React.FC<HtmlProps> = ({ query }) => {
   return (
-    <div className="relative">
+    <div className="relative mx-2">
       <div className="absolute top-[50vh] w-screen flex justify-center">
         <div className="max-w-fit">
           <h1 className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">

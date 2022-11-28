@@ -5,9 +5,9 @@ import Link from "next/link";
 const AboutPage: NextPage = () => {
   return (
     <>
-      <div className="mt-16 pb-12">
+      <div className="mt-16 mb-12 mx-4">
         <div className="mx-auto container max-w-6xl">
-          <h1 className="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">
+          <h1 className="font-extrabold text-center sm:text-left text-transparent text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">
             Sobre mim.
           </h1>
 
@@ -96,7 +96,7 @@ const AboutPage: NextPage = () => {
             </div>
           </div>
 
-          <h1 className="mt-14 font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
+          <h1 className="mt-14 break-words font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
             Experiência.
           </h1>
 
