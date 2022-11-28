@@ -46,7 +46,6 @@ export default function Home() {
 
   const { query } = useKBar();
 
-
   return (
     <>
       {/* <div className="relative flex flex-col justify-center h-full">

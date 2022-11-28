@@ -32,7 +32,7 @@ const Html: React.FC<HtmlProps> = ({ query }) => {
         </div>
       </div>
 
-      <div className="absolute top-[210vh] w-screen flex justify-center">
+      <div className="absolute top-[200vh] w-screen flex justify-center">
         <div className="max-w-fit">
           <h2 className="font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 text-center">
             Estou sempre pronto para um bate-papo.
