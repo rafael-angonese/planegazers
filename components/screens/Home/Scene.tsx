@@ -9,7 +9,7 @@ import { Particles } from "./Particles";
 
 interface SceneProps {
   query: KBarQuery;
-  showConfetti: () => void
+  showConfetti: (value: boolean) => void
 }
 
 const Scene: React.FC<SceneProps> = ({ query, showConfetti }) => {

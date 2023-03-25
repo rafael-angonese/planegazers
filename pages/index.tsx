@@ -105,7 +105,7 @@ export default function Home() {
         <ambientLight />
         <directionalLight color="red" intensity={10} />
         <Suspense fallback={null}>
-          <Scene query={query} showConfetti={() => setShowConfetti(true)} />
+          <Scene query={query} showConfetti={(value) => setShowConfetti(value)} />
         </Suspense>
       </Canvas>
     </>

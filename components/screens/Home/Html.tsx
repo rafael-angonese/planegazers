@@ -1,12 +1,14 @@
 import { KBarQuery } from "kbar";
-import React from "react";
+import React, { useState } from "react";
 
 interface HtmlProps {
   query: KBarQuery;
-  showConfetti: () => void;
+  showConfetti: (value: boolean) => void;
 }
 
 const Html: React.FC<HtmlProps> = ({ query, showConfetti }) => {
+  const [showMessage, setShowMessage] = useState(false);
+
   return (
     <div className="relative mx-2">
       <div className="absolute top-[50vh] w-screen flex justify-center">
@@ -27,14 +29,14 @@ const Html: React.FC<HtmlProps> = ({ query, showConfetti }) => {
             {/* Prepare-se para concretizar suas ideias criativas. */}
           </h2>
 
-          <h2 className="mt-12 font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center">
+          <h2 className="mt-12 font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center">
             <span
               className="cursor-pointer underline decoration-wavy decoration-4 underline-offset-2 decoration-purple-500 text-gray-400 hover:text-transparent"
               style={{
                 WebkitTextFillColor: "black",
                 WebkitTextStroke: "3px",
               }}
-              onClick={showConfetti}
+              onClick={() => showConfetti(true)}
             >
               SIM.
             </span>
@@ -47,11 +49,22 @@ const Html: React.FC<HtmlProps> = ({ query, showConfetti }) => {
                 WebkitTextFillColor: "black",
                 WebkitTextStroke: "3px",
               }}
-              // onClick={query.toggle}
+              onClick={() => {
+                showConfetti(false);
+                setShowMessage(true);
+              }}
             >
               NAO.
             </span>
           </h2>
+
+          {showMessage && (
+            <span className="mt-4 text-white sm:text-lg text-base  text-center justify-center flex">
+              algumas ações parecem não ter reação, mas as dimensões mudam e os
+              mundos se alinham tão certo quanto ondas de água se espalhando
+              depois de jogar pedras no mar.
+            </span>
+          )}
 
           {/* <span className="text-white sm:text-2xl text-xl flex xl:justify-end justify-center text-center">
             Eu gosto de criar experiências épicas divertidas e interativas com
