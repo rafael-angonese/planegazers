@@ -3,12 +3,14 @@ import ShortcutHome from "components/screens/Home/Shortcut";
 import { OrbitControls, Float } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import Plane from "components/Plane";
-import { Suspense, useRef } from "react";
+import { Suspense, useRef, useState } from "react";
 import useWindowScrollPositions from "hooks/useWindowScrollPositions";
 import useWindowSize from "hooks/useWindowSize";
 import PlaneScene from "components/screens/Home/Plane/Plane";
 import { Scene } from "components/screens/Home/Scene";
 import { useKBar } from "kbar";
+
+import Confetti from "react-confetti";
 
 const MyPlane = () => {
   // const {
@@ -45,6 +47,8 @@ export default function Home() {
   const { height, width } = useWindowSize();
 
   const { query } = useKBar();
+
+  const [showConfetti, setShowConfetti] = useState(false);
 
   return (
     <>
@@ -94,11 +98,14 @@ export default function Home() {
         </div>
       </div> */}
       {/* <ShortcutHome /> */}
+
+      {showConfetti && <Confetti width={width} height={height} />}
+
       <Canvas>
         <ambientLight />
         <directionalLight color="red" intensity={10} />
         <Suspense fallback={null}>
-          <Scene query={query} />
+          <Scene query={query} showConfetti={() => setShowConfetti(true)} />
         </Suspense>
       </Canvas>
     </>

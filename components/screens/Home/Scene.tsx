@@ -9,9 +9,10 @@ import { Particles } from "./Particles";
 
 interface SceneProps {
   query: KBarQuery;
+  showConfetti: () => void
 }
 
-const Scene: React.FC<SceneProps> = ({ query }) => {
+const Scene: React.FC<SceneProps> = ({ query, showConfetti }) => {
   useFrame(({ mouse, camera }) => {
     camera.position.x = THREE.MathUtils.lerp(
       camera.position.x,
@@ -38,11 +39,11 @@ const Scene: React.FC<SceneProps> = ({ query }) => {
   return (
     <ScrollControls pages={3}>
       <Scroll>
-        <Particles />
+        <Particles size={1000} />
         <Objects />
       </Scroll>
       <Scroll html>
-        <Html query={query} />
+        <Html query={query} showConfetti={showConfetti} />
       </Scroll>
     </ScrollControls>
   );
