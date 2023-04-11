@@ -46,10 +46,6 @@ export default function Home() {
   const { scrollX, scrollY } = useWindowScrollPositions();
   const { height, width } = useWindowSize();
 
-  const { query } = useKBar();
-
-  const [showConfetti, setShowConfetti] = useState(false);
-
   return (
     <>
       {/* <div className="relative flex flex-col justify-center h-full">
@@ -99,13 +95,11 @@ export default function Home() {
       </div> */}
       {/* <ShortcutHome /> */}
 
-      {showConfetti && <Confetti width={width} height={height} />}
-
       <Canvas>
         <ambientLight />
         <directionalLight color="red" intensity={10} />
         <Suspense fallback={null}>
-          <Scene query={query} showConfetti={(value) => setShowConfetti(value)} />
+          <Scene />
         </Suspense>
       </Canvas>
     </>

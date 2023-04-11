@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <CommandBar>
         <div className="flex flex-col h-screen">
-          {/* <Header /> */}
+          <Header />
           <div className="flex-1">
             <Component {...pageProps} />
           </div>

@@ -7,12 +7,8 @@ import { Html } from "./Html";
 import { Objects } from "./Objects";
 import { Particles } from "./Particles";
 
-interface SceneProps {
-  query: KBarQuery;
-  showConfetti: (value: boolean) => void
-}
 
-const Scene: React.FC<SceneProps> = ({ query, showConfetti }) => {
+const Scene: React.FC = () => {
   useFrame(({ mouse, camera }) => {
     camera.position.x = THREE.MathUtils.lerp(
       camera.position.x,
@@ -43,7 +39,7 @@ const Scene: React.FC<SceneProps> = ({ query, showConfetti }) => {
         <Objects />
       </Scroll>
       <Scroll html>
-        <Html query={query} showConfetti={showConfetti} />
+        <Html />
       </Scroll>
     </ScrollControls>
   );
