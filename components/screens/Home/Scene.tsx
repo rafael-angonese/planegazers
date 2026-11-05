@@ -1,6 +1,5 @@
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { KBarQuery } from "kbar";
 import React from "react";
 import * as THREE from "three";
 import { Html } from "./Html";
@@ -33,7 +32,7 @@ const Scene: React.FC = () => {
   });
 
   return (
-    <ScrollControls pages={3}>
+    <ScrollControls pages={4}>
       <Scroll>
         <Particles size={1000} />
         <Objects />
