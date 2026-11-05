@@ -1,27 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html {
-  @apply h-full bg-black;
-}
-body {
-  @apply h-full;
-}
-div#__next {
-  @apply h-full;
-}
-main {
-  @apply h-full;
-}
+@source "../app";
+@source "../components";
 
-
-/* html {
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-} */
-
-/* ===== Scrollbar CSS ===== */
+/* ===== Scrollbar ===== */
 /* Firefox */
 * {
   scrollbar-width: auto;
@@ -42,32 +24,3 @@ main {
   border-radius: 10px;
   border: 10px solid #ff80bf;
 }
-
-
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
- */

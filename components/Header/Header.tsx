@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { company } from "utils/company";
 
@@ -9,13 +11,13 @@ const links = [
 ];
 
 const Header: React.FC = () => {
-  const { pathname } = useRouter();
+  const pathname = usePathname();
 
   return (
     <header className="flex items-center justify-between gap-4 pt-3 px-5">
       <Link
         href="/"
-        className="font-extrabold text-transparent text-xl sm:text-2xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+        className="font-extrabold text-transparent text-xl sm:text-2xl bg-clip-text bg-linear-to-r from-purple-400 to-pink-600"
       >
         {company.name}
       </Link>

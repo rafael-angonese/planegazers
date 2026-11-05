@@ -7,7 +7,7 @@ const Html: React.FC = () => {
     <div className="relative mx-2">
       <div className="absolute top-[50vh] w-screen flex justify-center">
         <div className="max-w-fit">
-          <h1 className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">
+          <h1 className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-linear-to-r from-purple-400 to-pink-600 text-center">
             {company.name}
           </h1>
           <span className="text-white sm:text-lg text-base flex sm:justify-end justify-center text-center">
@@ -18,7 +18,7 @@ const Html: React.FC = () => {
 
       <div className="absolute top-[120vh] w-screen flex justify-center">
         <div className="max-w-fit">
-          <h2 className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-green-500 text-center">
+          <h2 className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-linear-to-r from-orange-400 to-green-500 text-center">
             Prepare-se para concretizar suas ideias criativas.
           </h2>
 
@@ -31,7 +31,7 @@ const Html: React.FC = () => {
 
       <div className="absolute top-[200vh] w-screen flex justify-center">
         <div className="max-w-fit ">
-          <div className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center">
+          <div className="font-extrabold text-transparent sm:text-6xl text-4xl bg-clip-text bg-linear-to-r from-purple-400 to-blue-500 text-center">
             <span className="block my-4">Sonhe</span>
             <span className="block my-4">Explore</span>
 

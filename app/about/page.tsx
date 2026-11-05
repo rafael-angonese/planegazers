@@ -1,9 +1,14 @@
-import Head from "next/head";
+import type { Metadata } from "next";
 import React from "react";
 import { company, fullAddress } from "utils/company";
 
 const title = `Sobre — ${company.legalName}`;
 const description = `${company.legalName} (CNPJ ${company.cnpj}) é uma empresa brasileira de desenvolvimento de software sediada em ${company.address.city}, ${company.address.stateName}.`;
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const Field: React.FC<{ label: string; children: React.ReactNode }> = ({
   label,
@@ -41,18 +46,14 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <main className="h-full overflow-y-auto">
         <div className="max-w-2xl mx-auto px-5 py-12 sm:py-16">
-          <h1 className="font-extrabold text-transparent text-3xl sm:text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <h1 className="font-extrabold text-transparent text-3xl sm:text-4xl bg-clip-text bg-linear-to-r from-purple-400 to-pink-600">
             {company.legalName}
           </h1>
 
