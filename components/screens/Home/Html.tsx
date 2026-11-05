@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { company } from "utils/company";
 
@@ -54,12 +55,14 @@ const Html: React.FC = () => {
           </p>
           <p className="mt-1 text-gray-300 text-sm">CNPJ {company.cnpj}</p>
 
-          <a
-            href={`mailto:${company.email}`}
-            className="mt-4 inline-block text-gray-100 text-base underline decoration-purple-500 decoration-2 underline-offset-4 hover:text-purple-300"
-          >
-            {company.email}
-          </a>
+          <p className="mt-4">
+            <Link
+              href="/about"
+              className="text-gray-300 text-sm underline decoration-purple-500 decoration-2 underline-offset-4 hover:text-purple-300"
+            >
+              Informações institucionais
+            </Link>
+          </p>
 
           <p className="mt-6 text-gray-400 text-sm">
             © {new Date().getFullYear()} {company.name}. Todos os direitos
