@@ -34,17 +34,15 @@ const Html: React.FC = () => {
             <span className="block my-4">Sonhe</span>
             <span className="block my-4">Explore</span>
 
-            <a href={`mailto:${company.email}`}>
-              <span
-                className="cursor-pointer underline decoration-wavy decoration-4 underline-offset-2 decoration-purple-500 text-transparent hover:text-gray-400"
-                style={{
-                  WebkitTextFillColor: "black",
-                  WebkitTextStroke: "3px",
-                }}
-              >
-                Descubra.
-              </span>
-            </a>
+            <span
+              className="block my-4 underline decoration-wavy decoration-4 underline-offset-2 decoration-purple-500 text-transparent"
+              style={{
+                WebkitTextFillColor: "black",
+                WebkitTextStroke: "3px",
+              }}
+            >
+              Descubra.
+            </span>
           </div>
         </div>
       </div>
